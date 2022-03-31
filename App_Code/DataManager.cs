@@ -126,7 +126,7 @@ namespace BaseDatosCinemix
              * 
              * Regresa los resultados de la consulta convertidos en lista
              */
-            using (CinemexEntities bd = new CinemexEntities())
+            using (CinemixEntities bd = new CinemixEntities())
             {
                 var horarios = from c in bd.Horario
                                where c.idCinePelicula == idPelicula
