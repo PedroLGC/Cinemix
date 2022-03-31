@@ -129,7 +129,7 @@ namespace BaseDatosCinemix
             using (CinemixEntities bd = new CinemixEntities())
             {
                 var horarios = from c in bd.Horario
-                               where c.idCinePelicula == idPelicula
+                               where c.IdCinePelicula == idPelicula
                                select c;
 
                 return horarios.ToList();
