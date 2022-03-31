@@ -61,7 +61,7 @@ namespace BaseDatosCinemix
              */
             using (CinemixEntities bd = new CinemixEntities())
             {
-                var cines = from c in bd.CinePelicula
+                var cines = from c in bd.Cine
                             where c.idCiudad == ciudad
                             select c;
 
