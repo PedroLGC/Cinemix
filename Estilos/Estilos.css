@@ -1,0 +1,190 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+/* Estilos para Master Page*/
+/*=======================================================*/
+#encabezado {
+    color: #ffffff;
+    padding: 15px;
+}
+
+#tablaEnc {
+    width: 70%;
+}
+
+#listasHeader {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+}
+
+#logo {
+    width: 120px;
+}
+
+nav {
+    background-color: #000000;
+    padding: 10px;
+}
+
+    nav a {
+        font-family: Arial;
+        text-decoration: none;
+        color: aliceblue;
+        margin-left: 30px;
+    }
+
+.footer {
+    background-color: #3e474f;
+    font-family: Arial;
+    color: azure;
+}
+
+    .footer a {
+        text-decoration: none;
+        color: aliceblue;
+        font-size: medium;
+    }
+
+#tablaPie td {
+    padding: 20px;
+}
+
+header {
+    background-image: url('../Imagenes/fondoHeader.jpg');
+}
+
+/* Estilos Generales */
+/*=======================================================*/
+
+table {
+    margin: 0 auto;
+}
+
+.parrafos {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-size: medium;
+    text-align: justify;
+}
+
+section {
+    width: 80%;
+    margin: auto;
+}
+
+
+/* Estilos para Cartelera Cine-Peliculas */
+/*=======================================================*/
+
+#nomCine {
+    background-color: brown;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 40%;
+    color: white;
+    font-family: "Comic Sans MS";
+    font-size: x-large;
+}
+
+
+#tablaPeliculas {
+    margin: 10px;
+    width: 50%;
+}
+
+    #tablaPeliculas td {
+        padding: 10px;
+    }
+
+    #tablaPeliculas p {
+        font-family: "Arial Narrow";
+        font-size: xx-small;
+    }
+
+#c1Pelicula {
+    width: 90px;
+}
+
+#cxPelicula {
+    width: 20px;
+}
+
+
+/* Estilos para Reserva de Boletos */
+/*=======================================================*/
+#infoReserva {
+    width: 350px;
+    background-color: gainsboro;
+    padding: 10px;
+}
+
+#divReserva {
+    margin: 20px;
+}
+
+#tituloPelicula {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    font-weight: bold;
+}
+
+#tablaCompra td {
+    padding: 10px;
+}
+
+/* Estilos para Controles ASP*/
+/*=======================================================*/
+.aspImg {
+    width: 80px;
+}
+
+.aspTitulo {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.aspClasificacion {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+    background-color: lightgray;
+    color: black;
+}
+
+.aspDuracion {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+    background-color: darkblue;
+    color: white;
+}
+
+.aspSinopsis {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+    width: 80px;
+}
+
+.aspTitCompra {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large;
+    color: red;
+}
+
+.aspPanelReserva {
+    padding: 10px;
+    margin: 10px;
+    font-family: "Arial Rounded MT Bold";
+    font-size: medium;
+    width: 300px;
+    background-color: #CCCCFF;
+}
+
+.aspBtnReserva {
+    background-color: black;
+    color: white;
+    margin: 10px;
+    width: 80px;
+    height: 40px;
+}
+

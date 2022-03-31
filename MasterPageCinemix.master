@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPageCinemix.master.cs" Inherits="MasterPage" %>
+
+<!-- Completa el diseño de la masterpage:
+     1. Hace falta agregar la imagen del logotipo en el header
+     2. Agregar la imagen de fondo para el header (tiene que ver con estilos css)
+     3. Una tabla con la información del footer-->
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="Estilos/Estilos.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <header>
+                <div id="encabezado">
+                    <table id="tablaEnc">
+                        <tr>
+                            <td rowspan="2">
+                                <img src="Imagenes/logoCinemix.png" />
+                            </td>
+                            <td colspan="2">
+                                <h1>Cinemix</h1>
+                            </td>
+                        </tr>
+                        <tr id="listasHeader">
+                            <td>
+                                <asp:Label ID="Label1" runat="server" Text="Ciudad: "></asp:Label>
+                                <asp:DropDownList ID="ddlCiudad" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlCiudad_SelectedIndexChanged" Width="200px"></asp:DropDownList>
+                            </td>
+                            <td>
+                                <asp:Label ID="Label2" runat="server" Text="Cine: "></asp:Label>
+                                <asp:DropDownList ID="ddlCine" runat="server" AutoPostBack="True" Width="200px" OnSelectedIndexChanged="ddlCine_SelectedIndexChanged"></asp:DropDownList>
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+                <nav>
+                    <a href="Inicio.aspx" target="_blank">Inicio</a> | <a href="Historia.aspx">Historia</a>
+                </nav>
+            </header>
+            <main>
+                <section>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </section>
+            </main>
+            <footer class="footer">
+                <h3>Atencion Telefonica</h3>
+                <table>
+                    <tr>
+                        <td>55 999-9999</td>
+                        <td><a href="AcercaDe.aspx">Sobre cinemex</a></td>
+                        <td> <img src="Imagenes/Paypal.png" /></td>
+                    </tr>
+                </table>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
