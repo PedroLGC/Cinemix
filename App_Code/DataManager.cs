@@ -130,7 +130,7 @@ namespace BaseDatosCinemix
             {
                 var horarios = from c in bd.Horario
                                where c.IdCinePelicula == idPelicula
-                               select c.horario1;
+                               select c.horario;
 
                 return horarios.ToList();
             }
