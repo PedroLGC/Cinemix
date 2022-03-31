@@ -59,6 +59,14 @@ namespace BaseDatosCinemix
              * 
              * Regresa los resultados de la consulta convertidos en lista
              */
+            using (CinemixEntities bd = new CinemixEntities())
+            {
+                var cines = from c in bd.CinePelicula
+                            where c.idCiudad == ciudad
+                            select c;
+
+                return cines.ToList();
+            }
         }
 
         /// <summary>
@@ -118,6 +126,14 @@ namespace BaseDatosCinemix
              * 
              * Regresa los resultados de la consulta convertidos en lista
              */
+            using (CinemexEntities bd = new CinemexEntities())
+            {
+                var horarios = from c in bd.Horario
+                               where c.idCinePelicula == idPelicula
+                               select c;
+
+                return horarios.ToList();
+            }
 
         }
 
