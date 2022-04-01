@@ -49,6 +49,32 @@ public partial class CompraBoletos : System.Web.UI.Page
 
         //Si el total es mayor a cero, muestra en el control lblInfoReserva el mensaje correspondiente
         //a la reserva indicando el total, de lo contrario muestra un mensaje indicando que se deben seleccionar los boletos.
+                int total = Convert.ToInt32(txtBolAdulto.Text)*70 + Convert.ToInt32(txtBolNiño.Text)*54 + 
+            Convert.ToInt32(txtBol3aEdad.Text)*50;
+
+        string msg;
+
+        string time  = "";
+
+        for (int i = 0; i < radHorarios.Items.Count; i++)
+        {
+            if (radHorarios.Items[i].Selected == true)
+            {
+                time = radHorarios.Items[i].Text;
+            }
+        }
+
+        if (total == 0)
+        {
+            msg = "No se seleccionarons boletos";
+        }
+        else
+        {
+            msg = "Tus boletos han sido reservados a las " + time + " hrs. Pagarás en el cine: $" + total.ToString()
+            + "<br><br>¡Qué disfrutes la película!";
+        }
+        
+        lblInfoReserva.Text = msg;
 
         pnlReserva.Visible = true;
 
@@ -111,6 +137,41 @@ public partial class CompraBoletos : System.Web.UI.Page
     {
         //Completa el metodo para decrementar uno a uno la cantidad de boletos
         //Si la cantidad es negativa el valor de la caja de texto debe quedar en cero
+                Button btn = sender as Button;
+
+        int nBol;
+
+        if (btn.ID == "btnMenosAdulto")
+        {
+            nBol = Convert.ToInt32(txtBolAdulto.Text);
+        }
+        else if (btn.ID == "btnMenosNiño")
+        {
+            nBol = Convert.ToInt32(txtBolNiño.Text);
+        }
+        else
+        {
+            nBol = Convert.ToInt32(txtBol3aEdad.Text);
+        }
+
+        --nBol;
+        if (nBol < 0)
+        {
+            nBol = 0;
+        }
+
+        if (btn.ID == "btnMenosAdulto")
+        {
+            txtBolAdulto.Text = nBol.ToString();
+        }
+        else if (btn.ID == "btnMenosNiño")
+        {
+            txtBolNiño.Text = nBol.ToString();
+        }
+        else
+        {
+            txtBol3aEdad.Text = nBol.ToString();
+        }
 
     }
 }
