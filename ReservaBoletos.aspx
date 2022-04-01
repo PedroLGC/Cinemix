@@ -21,7 +21,7 @@
             <td><asp:Label ID="lblDuracion" runat="server" Text="Label"></asp:Label></td>
         </tr>
         <tr><td colspan="2">
-            <asp:RadioButtonList ID="radHorarios" runat="server"></asp:RadioButtonList></td></tr>
+            <asp:RadioButtonList ID="radHorarios" runat="server" RepeatDirection="Horizontal"></asp:RadioButtonList></td></tr>
     </table>
 
     <div id="divReserva">
