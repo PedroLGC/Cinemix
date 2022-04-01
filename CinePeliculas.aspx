@@ -38,10 +38,12 @@
                         <td>
                             <!-- Agregar un control de tipo Label para que aparezca la clasificación de la pelicula 
                                  Sigue los ejemplos de los demas datos que se muestran en esta página-->
+                            <asp:Label ID="IblClasificacion" runat="server" CssClass="aspClasificacion"><%# Eval("Clasificacion")%></asp:Label>
                         </td>
                         <td>
                             <!-- Agregar un control de tipo Label para que aparezca la duracion de la pelicula 
                                 Sigue los ejemplos de los demas datos que se muestran en esta página-->
+                            <asp:Label ID="IblDuracion" runat="server" CssClass="aspDuracion"><%# Eval("Duracion")%></asp:Label>
                         </td>
                         <td>
                             <asp:Button ID="BtnCompra" runat="server" Text="Boletos" CommandName="CompraBoletos" />
