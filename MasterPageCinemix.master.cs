@@ -36,6 +36,14 @@ public partial class MasterPage : System.Web.UI.MasterPage
              * 
              * 3)Invoca al metodo DataBind del control ddlCine
              */
+             
+             ddlCine.DataSource = DataManager.GetCines(ciudad);
+
+             ddlCine.DataValueField = "idCine";
+
+             ddlCine.DataTextField = "nombre";
+
+             ddlCine.DataBind();
 
             ddlCine.Items.Insert(0, new ListItem("Selecciona el cine", ""));
             ddlCine.Items[0].Selected = true;   
