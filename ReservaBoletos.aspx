@@ -9,6 +9,19 @@
     <table id="tablaCompra">
        <!-- Completa el diseño de la tabla junto con los controles de acuerdo al diseño 
             que indique el profesor -->
+                <tr>
+            <td rowspan="3">
+                <asp:Image ID="imgPelicula" runat="server" />
+            </td>
+            <td colspan="2">
+                <asp:Label ID="lblPelicula" runat="server" Text="Label"></asp:Label></td>
+        </tr>
+        <tr>
+            <td><asp:Label ID="lblClasificacion" runat="server" Text="Label"></asp:Label></td>
+            <td><asp:Label ID="lblDuracion" runat="server" Text="Label"></asp:Label></td>
+        </tr>
+        <tr><td colspan="2">
+            <asp:RadioButtonList ID="radHorarios" runat="server"></asp:RadioButtonList></td></tr>
     </table>
 
     <div id="divReserva">
