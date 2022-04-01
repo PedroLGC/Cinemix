@@ -12,13 +12,14 @@ public partial class CinePeliculas : System.Web.UI.Page
             int idCine = Convert.ToInt32(Request.QueryString["idCine"]);  //se obtiene el dato idCine 
 
             //Invoca al metodo de DataManager que corresponda para obtener el nombre del cine para el idCine que se
-            //acaba de obtener. Asígnalo a la propiedad correspondiente del control lblCine
+            //acaba de obtener. Asígnalo a la propiedad correspondiente del control lblCine Done
+            lblCine.Text = DataManager.GetNomCine(idCine);
 
 
 
             //Invoca al metodo de DataManager que corresponda para obtener todas las peliculas que tiene un cine
-            //de acuerdo a su idCine. Asgnalo al DataSource del listview
-            lvPeliculas.DataSource = 
+            //de acuerdo a su idCine. Asgnalo al DataSource del listview Done
+            lvPeliculas.DataSource = DataManager.GetPeliculasDelCine(idCine);
             lvPeliculas.DataBind();
         }
     }
